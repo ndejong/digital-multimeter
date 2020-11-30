@@ -1,0 +1,4 @@
+
+shut==0.9.0
+pydoc-markdown==3.8.0
+readthedocs-custom-steps

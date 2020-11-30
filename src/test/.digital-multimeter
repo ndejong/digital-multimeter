@@ -1,0 +1,4 @@
+
+[digital-multimeter]
+model = Tecpel_DMM8062
+connect = /dev/ttyUSB0
