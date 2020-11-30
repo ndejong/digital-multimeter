@@ -21,11 +21,17 @@ $ shut pkg bump --patch --tag --push --dry
 # Patch release with push
 $ shut pkg bump --patch --tag --push
 
-# Minor release with push dry run
+# Minor release with push
 $ shut pkg bump --minor --tag --push
 
-# Minor release with push dry run
+# Major release with push
 $ shut pkg bump --major --tag --push
+
+# Publish package at test.pypi.com
+$ shut pkg publish --test warehouse:pypi
+
+# Publish package at pypi.com
+$ shut pkg publish warehouse:pypi
 ```
 
 ### pydoc-markdown
