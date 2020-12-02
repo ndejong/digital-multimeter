@@ -22,7 +22,7 @@ requirements = [
 
 setuptools.setup(
   name = 'digital-multimeter',
-  version = '0.0.3',
+  version = '0.1.0',
   author = 'Nicholas de Jong',
   author_email = 'contact@nicholasdejong.com',
   description = 'Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a variety of digital multimeters.',
@@ -40,7 +40,7 @@ setuptools.setup(
   data_files = [],
   entry_points = {
     'console_scripts': [
-      'dmm = digital_multimeter.cli:entrypoints.dmm',
+      'dmm = digital_multimeter.cli.entrypoints:dmm',
     ]
   },
   cmdclass = {},
