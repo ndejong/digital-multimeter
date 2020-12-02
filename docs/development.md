@@ -27,6 +27,10 @@ $ shut pkg bump --minor --tag --push
 # Major release with push
 $ shut pkg bump --major --tag --push
 
+# Build a package
+$ shut pkg build -vvv setuptools:wheel
+$ shut pkg build -vvv setuptools:*
+
 # Publish package at test.pypi.com
 $ shut pkg publish --test warehouse:pypi
 
