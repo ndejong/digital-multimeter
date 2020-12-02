@@ -64,8 +64,8 @@ def get_reading(model, connect, config, count, output, format):
     logger.debug('connect={}'.format(connect))
 
     if not connect:
-        raise MultimeterException('DigitalMultimeter connect parameter not supplied.  See documentation to set this '
-                                  'using the {} environment variable or using a configuration '
+        raise MultimeterException('DigitalMultimeter --connect parameter not supplied.  See documentation to '
+                                  'alternatively set this using the {} environment variable or using a configuration '
                                   'file.'.format(ENV_CONNECT))
 
     api = DigitalMultimeter(connect=connect, model=model)
