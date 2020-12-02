@@ -1,0 +1,6 @@
+release_date: '2020-12-03'
+changes:
+- type: feature
+  component: general
+  description: Adds reference to online documentation to within the CLI tool
+  fixes: []

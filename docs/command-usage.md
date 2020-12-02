@@ -9,8 +9,10 @@ Usage: dmm [OPTIONS] COMMAND [ARGS]...
   Digital multimeter CLI tool utilizing the Python3 DigitalMultimeter
   module.
 
-  Configuration can be achieved through environment values or a config file.
-  See documentation for details.
+  Configuration can be achieved through command arguments, environment
+  values or config file.
+
+  Documentation available https://digital-multimeter.readthedocs.io
 
 Options:
   -q, --quiet             Quiet mode; priority over --verbose
