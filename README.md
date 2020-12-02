@@ -3,7 +3,7 @@
 [![Build Status](https://api.travis-ci.org/ndejong/digital-multimeter.svg?branch=master)](https://travis-ci.org/ndejong/digital-multimeter/)
 
 Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a 
-variety of digital multimeters.  Checkout the [list of supported multimeters](./docs/supported-multimeters).
+variety of digital multimeters.  Checkout the [list of supported multimeters](https://digital-multimeter.readthedocs.io/en/latest/docs/supported-multimeters).
 
 ## Project
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
@@ -17,13 +17,13 @@ pip3 install digital-multimeter
 ```
 
 ## CLI Usage
-Command-line examples [available here](./docs/command-examples/).
+Command-line examples [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/command-examples/).
 
 ## Python Module Usage
-Python-module documentation is [available here](./docs/python3-module/).
+Python-module documentation is [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/python3-module/).
 
 ## Change Log
-Change log details are [available here](./docs/changelog/).
+Change log details are [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/changelog/).
 
 ## To Do
 * More tests
