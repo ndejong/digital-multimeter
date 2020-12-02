@@ -9,32 +9,24 @@ Package release and management tools - https://pypi.org/project/shut - [document
 # Update package files
 $ shut pkg update
 
-# Create a changelog entry for a fix
+# Create a staged changelog entry for a fix/feature
 $ shut changelog --add fix --stage --message "Fixes bug"
-
-# Create a changelog entry for a feature
 $ shut changelog --add feature --stage --message "Initial version"
 
 # Patch release with push dry run
 $ shut pkg bump --patch --tag --push --dry
 
-# Patch release with push
+# Release bumps at patch/minor/major levels
 $ shut pkg bump --patch --tag --push
-
-# Minor release with push
 $ shut pkg bump --minor --tag --push
-
-# Major release with push
 $ shut pkg bump --major --tag --push
 
 # Build a package
 $ shut pkg build -vvv setuptools:wheel
 $ shut pkg build -vvv setuptools:*
 
-# Publish package at test.pypi.com
+# Publish a package
 $ shut pkg publish --test warehouse:pypi
-
-# Publish package at pypi.com
 $ shut pkg publish warehouse:pypi
 ```
 
