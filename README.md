@@ -1,4 +1,6 @@
 # Digital Multimeter
+[![PyPi](https://img.shields.io/pypi/v/digital-multimeter.svg)](https://pypi.python.org/pypi/digital-multimeter/)
+[![Build Status](https://api.travis-ci.org/ndejong/digital-multimeter.svg?branch=master)](https://travis-ci.org/ndejong/digital-multimeter/)
 
 Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a 
 variety of digital multimeters.  Checkout the [list of supported multimeters](./docs/supported-multimeters).
