@@ -28,7 +28,7 @@ setuptools.setup(
   description = 'Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a variety of digital multimeters.',
   long_description = long_description,
   long_description_content_type = 'text/markdown',
-  url = 'https://pypi.python.org/pypi/digital-multimeter/',
+  url = 'https://digital-multimeter.readthedocs.io/en/latest/',
   license = 'MIT',
   packages = setuptools.find_packages('src', ['test', 'test.*', 'tests', 'tests.*', 'docs', 'docs.*']),
   package_dir = {'': 'src'},
@@ -38,7 +38,11 @@ setuptools.setup(
   tests_require = [],
   python_requires = '>=3.5.0,<4.0.0',
   data_files = [],
-  entry_points = {},
+  entry_points = {
+    'console_scripts': [
+      'dmm = digital_multimeter.cli:entrypoints.dmm',
+    ]
+  },
   cmdclass = {},
   keywords = [],
   classifiers = [],

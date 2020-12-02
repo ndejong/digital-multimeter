@@ -5,11 +5,11 @@ import re
 import sys
 
 try:
-    from digital_multimeter.cli import commands
+    from digital_multimeter.cli import entrypoints
 except ModuleNotFoundError as e:
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-    from digital_multimeter.cli import commands
+    from digital_multimeter.cli import entrypoints
 
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
-    sys.exit(commands.dmm())
+    sys.exit(entrypoints.dmm())
