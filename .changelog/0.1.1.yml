@@ -2,20 +2,5 @@ release_date: '2020-12-03'
 changes:
 - type: feature
   component: general
-  description: "Refactored to suit Usage: shut [OPTIONS] COMMAND [ARGS]...\n\n  Shut\
-    \ is a tool to manage the lifecycle of pure Python packages. It\n  automates tasks\
-    \ such as bootstrapping a project, bumping version numbers,\n  managing changelogs\
-    \ and publishing packages to PyPI all the while\n  performing sanity checks.\n\
-    \n  Shut makes strong assumptions on the project structure and assumes that\n\
-    \  the source-control system of choice is Git.\n\nOptions:\n  -C, --cwd path \
-    \         Run as if shut was started inside the specified\n                  \
-    \        directory.\n\n  -v, --verbose           Increase the log verbosity.\n\
-    \  -q, --quiet             Quiet mode, wins over --verbose.\n  -W, --disable-warnings\
-    \  Disable Python warnings.\n  --version               Show the version and exit.\n\
-    \  --help                  Show this message and exit.\n\nCommands:\n  changelog\
-    \    Show changelogs or create new entries.\n  classifiers  List or search package\
-    \ classifiers on PyPI.\n  conda-forge  Utility to update conda-forge recipes.\n\
-    \  license      Get license information from DejaCode.\n  mono         Manage\
-    \ the current mono repository.\n  pkg          Manage the Python package in the\
-    \ current directory. packging tool"
+  description: Refactored to suit "shut" packging tool
   fixes: []
