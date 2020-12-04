@@ -12,12 +12,17 @@ variety of digital multimeters.  Checkout the [list of supported multimeters](ht
 * ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io/en/latest/)
 
 ## Installation
-```shell script
-pip3 install digital-multimeter
+```shell
+user@computer:~$ pip3 install digital-multimeter
 ```
 
 ## CLI Usage
-Command-line examples [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/command-examples/).
+Continuously read the digital-multimeter and pipe the JSON output through `jq` making it look prettier.
+```shell
+user@computer:~$ dmm read --count 0 | jq .
+```
+
+Plenty more command-line examples [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/command-examples/).
 
 ## Python Module Usage
 Python-module documentation is [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/python3-module/).
