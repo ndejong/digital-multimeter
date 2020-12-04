@@ -3,8 +3,8 @@
 ## Development
 The following tools are used to create and manage this package.
 
-### shut 
-Package release and management tools - https://pypi.org/project/shut - [documentation](https://github.com/NiklasRosenstein/shut/blob/develop/docs/docs/index.md)
+### https://pypi.org/project/shut
+Package release and management tools - [documentation](https://github.com/NiklasRosenstein/shut/blob/develop/docs/docs/index.md)
 ```shell script
 # Update package files
 $ shut pkg update
@@ -13,13 +13,10 @@ $ shut pkg update
 $ shut changelog --add fix --stage --message "Fixes bug"
 $ shut changelog --add feature --stage --message "Initial version"
 
-# Patch release with push dry run
+# Release bumps at patch/minor/major levels with --dry runs
 $ shut pkg bump --patch --tag --push --dry
-
-# Release bumps at patch/minor/major levels
-$ shut pkg bump --patch --tag --push
-$ shut pkg bump --minor --tag --push
-$ shut pkg bump --major --tag --push
+$ shut pkg bump --minor --tag --push --dry
+$ shut pkg bump --major --tag --push --dry
 
 # Build a package
 $ shut pkg build -vvv setuptools:wheel
@@ -30,8 +27,8 @@ $ shut pkg publish --test warehouse:pypi
 $ shut pkg publish warehouse:pypi
 ```
 
-### pydoc-markdown
-Documentation generation tools - https://pydoc-markdown.readthedocs.io/en/latest/
+### https://pypi.org/project/pydoc-markdown
+Documentation generation tools - [documentation](https://pydoc-markdown.readthedocs.io/en/latest/)
 ```shell script
 # Render documentation
 $ pydoc-markdown docs/pydoc-markdown.yml 
