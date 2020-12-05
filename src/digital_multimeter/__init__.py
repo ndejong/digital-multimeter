@@ -2,7 +2,7 @@
 # Copyright (c) 2020 Nicholas de Jong
 
 __author__ = 'Nicholas de Jong <contact@nicholasdejong.com>'
-__version__ = '0.1.6'
+__version__ = '0.2.0'
 __title__ = "digital-multimeter"
 __license__ = "MIT"
 

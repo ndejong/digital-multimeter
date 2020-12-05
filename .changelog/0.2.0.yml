@@ -1,0 +1,6 @@
+release_date: '2020-12-05'
+changes:
+- type: fix
+  component: general
+  description: Adds some tests, improved documentation etc
+  fixes: []
