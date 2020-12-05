@@ -4,13 +4,18 @@ version: 0.2.1
 license: MIT
 author: Nicholas de Jong <contact@nicholasdejong.com>
 description: Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a variety of digital multimeters.
-url: https://digital-multimeter.readthedocs.io/en/latest/
+url: https://digital-multimeter.readthedocs.io/
+
+typed: false
+
+entrypoints:
+ console_scripts:
+  - dmm = digital_multimeter.cli.entrypoints:dmm
+
+test-driver:
+  type: pytest
+
 requirements:
   - python ^3.5
   - click
   - pyserial
-entrypoints:
- console_scripts:
-  - dmm = digital_multimeter.cli.entrypoints:dmm
-test-driver:
-  type: pytest
