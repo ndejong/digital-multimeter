@@ -1,6 +1,0 @@
-release_date: '2020-12-03'
-changes:
-- type: feature
-  component: general
-  description: Refactored to suit "shut" packging tool
-  fixes: []
