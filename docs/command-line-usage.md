@@ -1,6 +1,6 @@
 # Digital Multimeter
 
-## Command
+## Command Line Usage
 
 ### Usage
 ```shell script

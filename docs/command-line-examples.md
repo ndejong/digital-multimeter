@@ -1,7 +1,6 @@
 # Digital Multimeter
 
-## Command
-
+## Command Line Examples
 
 ### Example 1: `dmm read`
 Obtain a single reading from the `Default` multimeter attached to `/dev/ttyUSB0` in JSON format

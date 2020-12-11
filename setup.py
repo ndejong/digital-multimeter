@@ -28,7 +28,7 @@ setuptools.setup(
   description = 'Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a variety of digital multimeters.',
   long_description = long_description,
   long_description_content_type = 'text/markdown',
-  url = 'https://digital-multimeter.readthedocs.io/en/latest/',
+  url = 'https://digital-multimeter.readthedocs.io/',
   license = 'MIT',
   packages = setuptools.find_packages('src', ['test', 'test.*', 'tests', 'tests.*', 'docs', 'docs.*']),
   package_dir = {'': 'src'},
@@ -44,7 +44,7 @@ setuptools.setup(
     ]
   },
   cmdclass = {},
-  keywords = [],
-  classifiers = [],
+  keywords = ['multimeter', 'digital multimeter', 'dmm', 'Fortune FS9721'],
+  classifiers = ['Environment :: Console', 'Intended Audience :: Developers', 'Intended Audience :: Information Technology', 'Programming Language :: Python :: 3.5', 'Programming Language :: Python :: 3.6', 'Programming Language :: Python :: 3.7', 'Programming Language :: Python :: 3.8', 'License :: OSI Approved :: MIT License'],
   zip_safe = True,
 )

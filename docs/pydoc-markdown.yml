@@ -56,25 +56,28 @@ renderer:
       source: ../README.md
       directory: '..'
 
-    - title: Command Usage
+    - title: Command Line
       preamble:
-        weight: 20
-      name: command-usage
-      source: command-usage.md
-
-    - title: Command Examples
-      preamble:
-        weight: 25
-      name: command-examples
-      source: command-examples.md
+        weight: 10
+      name: command-line
+      source: command-line.md
+      children:
+      - title: Usage
+        preamble:
+          weight: 10
+        source: command-line-usage.md
+      - title: Examples
+        preamble:
+          weight: 20
+        source: command-line-examples.md
 
     - title: Supported Multimeters
       preamble:
-        weight: 27
+        weight: 15
       name: supported-multimeters
       source: supported-multimeters.md
 
-    - title: Python3 Module
+    - title: Python Module
       preamble:
         weight: 30
       contents:
