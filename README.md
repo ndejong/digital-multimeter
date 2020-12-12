@@ -2,7 +2,7 @@
 [![PyPi](https://img.shields.io/pypi/v/digital-multimeter.svg)](https://pypi.python.org/pypi/digital-multimeter/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/digital-multimeter.svg)](https://github.com/ndejong/digital-multimeter/)
 [![Build Status](https://api.travis-ci.org/ndejong/digital-multimeter.svg?branch=master)](https://travis-ci.org/ndejong/digital-multimeter/)
-![Read the Docs](https://img.shields.io/readthedocs/digital-multimeter)
+[![Read the Docs](https://img.shields.io/readthedocs/digital-multimeter)](https://digital-multimeter.readthedocs.io)
 ![PyPI license](https://img.shields.io/pypi/l/digital-multimeter.svg)
 
 Digital Multimeter provides both a command-line interface and a Python module interface to receive data from a 
@@ -63,7 +63,7 @@ Python-module documentation is [available here](https://digital-multimeter.readt
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
 * PyPI - [pypi.python.org/pypi/digital-multimeter](https://pypi.python.org/pypi/digital-multimeter/)
 * TravisCI - [travis-ci.org/github/ndejong/digital-multimeter](https://travis-ci.org/github/ndejong/digital-multimeter)
-* ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io/en/latest/)
+* ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
 
 ---
 Copyright &copy; 2020 Nicholas de Jong
