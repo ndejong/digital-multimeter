@@ -1,7 +1,7 @@
 
 name: digital-multimeter
-version: 0.2.2
-license: MIT
+version: 0.3.0
+license: BSD2
 author: Nicholas de Jong <contact@nicholasdejong.com>
 description: Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a variety of digital multimeters.
 url: https://digital-multimeter.readthedocs.io/
@@ -28,7 +28,7 @@ classifiers:
   - "Programming Language :: Python :: 3.6"
   - "Programming Language :: Python :: 3.7"
   - "Programming Language :: Python :: 3.8"
-  - "License :: OSI Approved :: MIT License"
+  - "License :: OSI Approved :: BSD License"
 
 keywords:
   - "multimeter"
