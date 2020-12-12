@@ -1,3 +1,8 @@
+## 0.2.2 (2020-12-12)
+
+* __general__
+    * **fix**: Documentation updates
+
 ## 0.2.0 (2020-12-05)
 
 * __general__
