@@ -22,7 +22,7 @@ requirements = [
 
 setuptools.setup(
   name = 'digital-multimeter',
-  version = '0.3.1',
+  version = '0.3.2',
   author = 'Nicholas de Jong',
   author_email = 'contact@nicholasdejong.com',
   description = 'Digital Multimeter provides both a CLI interface and a Python3 library interface to receive data from a variety of digital multimeters.',
