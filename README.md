@@ -3,7 +3,7 @@
 [![Python Versions](https://img.shields.io/pypi/pyversions/digital-multimeter.svg)](https://github.com/ndejong/digital-multimeter/)
 [![Build Status](https://api.travis-ci.org/ndejong/digital-multimeter.svg?branch=master)](https://travis-ci.org/ndejong/digital-multimeter/)
 [![Read the Docs](https://img.shields.io/readthedocs/digital-multimeter)](https://digital-multimeter.readthedocs.io)
-![PyPI license](https://img.shields.io/pypi/l/digital-multimeter.svg)
+![License](https://img.shields.io/github/license/ndejong/digital-multimeter.svg)
 
 Digital Multimeter provides both a command-line interface and a Python module interface to receive data from a 
 variety of digital multimeters.  Checkout the [list of supported multimeters](https://digital-multimeter.readthedocs.io/en/latest/docs/supported-multimeters).
