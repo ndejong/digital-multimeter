@@ -66,4 +66,4 @@ Python-module documentation is [available here](https://digital-multimeter.readt
 * ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
 
 ---
-Copyright &copy; 2020 Nicholas de Jong
+Copyright &copy; 2021 Nicholas de Jong
