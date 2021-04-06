@@ -224,6 +224,8 @@ class MultimeterVC870USBHID(MultimeterBase):
                 "operation_mode": mode[0],
                 "value": value,
                 "unit": mode[1],
+                "aux_value": None,
+                "aux_unit": None,
             },
             "instrument": {
                 "module": __name__.split(".")[-1],
@@ -241,14 +243,23 @@ class MultimeterVC870USBHID(MultimeterBase):
         # In certain modes AUX values are available
         if len(mode) == 5:
             aux_value *= mode[4]
-            return_dict["reading"]["aux value"] = aux_value
-            return_dict["reading"]["aux unit"] = mode[3]
+            return_dict["reading"]["aux_value"] = aux_value
+            return_dict["reading"]["aux_unit"] = mode[3]
 
         return return_dict
 
     def _parse_packet_operation_mode(self, packet):
         operation_id = packet[:2]
 
+        # The first two bytes define the measurement mode (function code + function select code)
+        # Resulting from these two bytes the following parameters can be derived:
+        # 1. Operation mode
+        # 2. Physical unit that is measured
+        # 3. Base factor to calculate the SI value from the display value
+        # In some operation modes there is an auxiliary value measured and displayed.
+        # In this case the value tuple is extended by:
+        # 4. Physical unit of the auxiliary measurement
+        # 5. Base factor to calculate the SI value from the auxiliary value
         id_to_op_mode = {
             "00": ("DCV", "V", 1e-4),
             "01": ("ACV", "V", 1e-4),
