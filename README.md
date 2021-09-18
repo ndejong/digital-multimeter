@@ -1,7 +1,6 @@
 # Digital Multimeter
 [![PyPi](https://img.shields.io/pypi/v/digital-multimeter.svg)](https://pypi.python.org/pypi/digital-multimeter/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/digital-multimeter.svg)](https://github.com/ndejong/digital-multimeter/)
-[![Build Status](https://api.travis-ci.org/ndejong/digital-multimeter.svg?branch=master)](https://travis-ci.org/ndejong/digital-multimeter/)
 [![Read the Docs](https://img.shields.io/readthedocs/digital-multimeter)](https://digital-multimeter.readthedocs.io)
 ![License](https://img.shields.io/github/license/ndejong/digital-multimeter.svg)
 
@@ -62,7 +61,6 @@ Python-module documentation is [available here](https://digital-multimeter.readt
 ## Project
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
 * PyPI - [pypi.python.org/pypi/digital-multimeter](https://pypi.python.org/pypi/digital-multimeter/)
-* TravisCI - [travis-ci.org/github/ndejong/digital-multimeter](https://travis-ci.org/github/ndejong/digital-multimeter)
 * ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
 
 ---
