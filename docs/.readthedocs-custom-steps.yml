@@ -1,3 +1,4 @@
 
 steps:
-  - pydoc-markdown --build --site-dir "$PWD/_build/html"
+  - echo "hello-world"
+  - pydoc-markdown --build --site-dir "$PWD/_build/html" -vv "$PWD/docs/pydoc-markdown.yml"
