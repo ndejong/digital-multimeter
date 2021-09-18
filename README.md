@@ -62,7 +62,6 @@ Python-module documentation is [available here](https://digital-multimeter.readt
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
 * PyPI - [pypi.python.org/pypi/digital-multimeter](https://pypi.python.org/pypi/digital-multimeter/)
 * ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
-* 1x Canary 
 
 ---
 Copyright &copy; 2021 Nicholas de Jong
