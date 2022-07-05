@@ -1,4 +1,3 @@
-
 import os
 import logging
 import functools
@@ -33,12 +32,12 @@ class Config:
     def get(self, item):
 
         if not self.session_config_file:
-            if item == 'connect':  # serial port
+            if item == "connect":  # serial port
                 env_name = ENV_CONNECT
-            elif item == 'model':  # dmm model
+            elif item == "model":  # dmm model
                 env_name = ENV_MODEL
             else:
-                raise ConfigException('Unknown configuration attribute requested.', item)
+                raise ConfigException("Unknown configuration attribute requested.", item)
 
             # Environment variable
             if os.environ.get(env_name):
@@ -54,13 +53,9 @@ class Config:
         config = None
 
         if self.session_config_file and not os.path.isfile(os.path.expanduser(self.session_config_file)):
-            raise ConfigException('Unable to find the configuration filename supplied.', self.session_config_file)
+            raise ConfigException("Unable to find the configuration filename supplied.", self.session_config_file)
 
-        config_files = [
-            self.session_config_file,
-            CONFIG_FILE_USER,
-            CONFIG_FILE_SYSTEM
-        ]
+        config_files = [self.session_config_file, CONFIG_FILE_USER, CONFIG_FILE_SYSTEM]
 
         for config_file in config_files:
             if config_file and os.path.isfile(os.path.expanduser(config_file)):
@@ -71,7 +66,7 @@ class Config:
             logger.debug('"{}" unset because no configuration file found.'.format(item))
             return None
 
-        _item = item.replace('_', '').replace('-', '')
+        _item = item.replace("_", "").replace("-", "")
         if _item not in config.keys():
             logger.debug('Unable to find "{}" setting in the configuration file.'.format(item))
             return None
@@ -90,7 +85,7 @@ class Config:
             try:
                 cp.read(filename)
             except Exception as e:
-                raise ConfigException('Unable to correctly parse the configuration file provided.', e)
+                raise ConfigException("Unable to correctly parse the configuration file provided.", e)
 
             if section not in cp.sections():
                 raise ConfigException(
@@ -98,8 +93,8 @@ class Config:
                 )
             config = {}
             for option in cp.options(section):
-                config[str(option).replace('_', '').replace('-', '')] = cp.get(section, option)
-            logger.debug('configuration file read: {}'.format(filename))
+                config[str(option).replace("_", "").replace("-", "")] = cp.get(section, option)
+            logger.debug("configuration file read: {}".format(filename))
             return config
 
-        raise ConfigException('Unable to find the configuration filename supplied.', filename)
+        raise ConfigException("Unable to find the configuration filename supplied.", filename)

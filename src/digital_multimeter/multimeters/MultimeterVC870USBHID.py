@@ -81,7 +81,9 @@ class MultimeterVC870USBHID(MultimeterBase):
         if self.dev is None:
             raise MultimeterVC870USBHIDException("Could not find USB device")
         else:
-            logger.debug("Connected to VID={}, PID={} successfully".format(connect_info.group(1), connect_info.group(2)))
+            logger.debug(
+                "Connected to VID={}, PID={} successfully".format(connect_info.group(1), connect_info.group(2))
+            )
 
         # This reset helps to readout the CH9325
         self.dev.reset()
@@ -201,7 +203,9 @@ class MultimeterVC870USBHID(MultimeterBase):
 
             retries += 1
             if (retries > PACKET_RETRY_LIMIT) and (bytes_to_read > 0):
-                raise MultimeterVC870USBHIDException("Too many invalid responses after {} retries".format(PACKET_RETRY_LIMIT))
+                raise MultimeterVC870USBHIDException(
+                    "Too many invalid responses after {} retries".format(PACKET_RETRY_LIMIT)
+                )
 
         return packet
 
@@ -350,8 +354,8 @@ class MultimeterVC870USBHID(MultimeterBase):
 
         # They are always on and therefore not very helpful
         # if option3 & 0b100:
-            # active_flags.append("usb")
+        # active_flags.append("usb")
         # if option3 & 0b1:
-            # active_flags.append("auto_power")
+        # active_flags.append("auto_power")
 
         return "|".join(active_flags)

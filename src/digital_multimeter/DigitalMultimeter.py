@@ -1,4 +1,3 @@
-
 import logging
 from digital_multimeter.multimeters import multimeter_models
 from digital_multimeter.exceptions.MultimeterException import MultimeterException
@@ -16,7 +15,7 @@ class DigitalMultimeter:
     model = None
     multimeter = None
 
-    def __init__(self, connect=None, model='Default'):
+    def __init__(self, connect=None, model="Default"):
         """
         NB: Connection to the digital multimeter does not occur until required in a `get_reading()` call.
 
@@ -27,7 +26,7 @@ class DigitalMultimeter:
         """
         self.connect = connect
         if model not in multimeter_models.keys():
-            raise MultimeterException('Multimeter model not supported', model)
+            raise MultimeterException("Multimeter model not supported", model)
         self.model = model
 
     def get_reading(self):
@@ -37,19 +36,19 @@ class DigitalMultimeter:
         """
         if not self.multimeter:
             self.__load_multimeter()
-        return getattr(self.multimeter, 'get_reading')()
+        return getattr(self.multimeter, "get_reading")()
 
     def __load_multimeter(self):
         if self.multimeter:
             return
         class_name = multimeter_models[self.model]
-        logger.debug('Digital multimeter model: {}'.format(self.model))
-        logger.debug('Loading digital multimeter class: {}'.format(class_name))
-        module = __import__('digital_multimeter.multimeters.{}'.format(class_name), fromlist=['digital_multimeter'])
+        logger.debug("Digital multimeter model: {}".format(self.model))
+        logger.debug("Loading digital multimeter class: {}".format(class_name))
+        module = __import__("digital_multimeter.multimeters.{}".format(class_name), fromlist=["digital_multimeter"])
         self.multimeter = getattr(module, class_name)(connect=self.connect)
 
     def get_models_supported(self):
         """
         Returns a list of the supported digital multimeter models.
         """
-        return {'models': list(multimeter_models.keys())}
+        return {"models": list(multimeter_models.keys())}

@@ -1,4 +1,3 @@
-
 import pytest
 from digital_multimeter import __author__
 from digital_multimeter import __version__

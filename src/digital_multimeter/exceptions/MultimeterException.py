@@ -1,4 +1,2 @@
-
-
 class MultimeterException(Exception):
     pass

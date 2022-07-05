@@ -11,10 +11,10 @@ def dmm():
     try:
         click.dmm()
     except MultimeterException as e:
-        print('')
-        print('{} v{}'.format(NAME, VERSION))
-        print('ERROR: ', end='')
+        print("")
+        print("{} v{}".format(NAME, VERSION))
+        print("ERROR: ", end="")
         for err in iter(e.args):
             print(err)
-        print('')
+        print("")
         exit(9)
