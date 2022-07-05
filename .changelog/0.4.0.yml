@@ -2,3 +2,4 @@ changes:
 - type: feature
   component: general
   description: Add support for Voltcraft_VC870, Editronic_EDI9604 and Digitec_DT9604
+release_date: '2022-07-05'
