@@ -16,8 +16,11 @@ multimeter_models = {
     "UniTrend_UT60E": "MultimeterFortuneFS9721",
     "Voltcraft_VC820": "MultimeterFortuneFS9721",
     "Voltcraft_VC840": "MultimeterFortuneFS9721",
+
     # MultimeterVC870USBHID
     "Voltcraft_VC870": "MultimeterVC870USBHID",
+
     # MultimeterEDI9604
     "Editronic_EDI9604": "MultimeterEDI9604",
+    "Digitec_DT9604": "MultimeterEDI9604",
 }
