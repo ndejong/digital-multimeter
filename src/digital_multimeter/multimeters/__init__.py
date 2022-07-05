@@ -17,6 +17,7 @@ multimeter_models = {
     'UniTrend_UT60E': 'MultimeterFortuneFS9721',
     'Voltcraft_VC820': 'MultimeterFortuneFS9721',
     'Voltcraft_VC840': 'MultimeterFortuneFS9721',
+    'Editronic_EDI9604': 'MultimeterEDI9604',
 
     # TODO: add additional multimeter equivalent models
 }

@@ -26,4 +26,4 @@ pull request!
 | UniTrend      | UT60E     | `UniTrend_UT60E`      | FortuneFS9721 | Reference [Sigrok](https://sigrok.org/wiki/UNI-T_UT60E) |
 | Voltcraft     | VC820     | `Voltcraft_VC820`     | FortuneFS9721 | Reference [Sigrok](https://sigrok.org/wiki/Voltcraft_VC-820) |
 | Voltcraft     | VC840     | `Voltcraft_VC840`     | FortuneFS9721 | Reference [Sigrok](https://sigrok.org/wiki/Voltcraft_VC-840) |
-
+| Editronic     | EDI-9604  | `MultimeterEDI9604`   | MultimeterEDI9604 | Reverse Engineered |
