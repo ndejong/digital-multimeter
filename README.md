@@ -19,7 +19,7 @@ variety of digital multimeters.  Checkout the [list of supported multimeters](ht
 
 ## Installation
 ```shell
-user@computer:~$ pip3 install digital-multimeter
+user@computer:~$ pip install [--upgrade] digital-multimeter
 ```
 
 ## Command Line Usage
