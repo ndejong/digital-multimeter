@@ -53,10 +53,10 @@ user@computer:~$ dmm read --connect /dev/ttyUSB0 --count 0 | jq .
 }
 ```
 
-Plenty more command-line examples [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/command-examples/).
+Plenty more command-line examples [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/command-line/examples/).
 
 ## Python Module Usage
-Python-module documentation is [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/python3-module/).
+Python-module documentation is [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/python-module/).
 
 ## Project
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
@@ -64,4 +64,4 @@ Python-module documentation is [available here](https://digital-multimeter.readt
 * ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
 
 ---
-Copyright &copy; 2021 Nicholas de Jong
+Copyright &copy; 2021-2022 [Nicholas de Jong](https://www.nicholasdejong.com)
