@@ -128,7 +128,7 @@ class MultimeterFortuneFS9721(MultimeterBase):
             return "capacitance"
         elif int(packet[12][2]) == 1 or int(packet[10][1]) == 1:
             return "frequency"
-        elif int(packet[13][1]) == 1:
+        elif int(packet[13][3]) == 1:
             return "temperature"
         raise MultimeterFortuneFS9721Exception("Unsupported digital multimeter mode from packet")
 
@@ -233,7 +233,7 @@ class MultimeterFortuneFS9721(MultimeterBase):
         elif int(packet[10][1]) == 1:
             unit_name = "duty-cycle"
             unit_symbol = "%"
-        elif int(packet[13][1]) == 1:
+        elif int(packet[13][3]) == 1:
             unit_name = "celsius"
             unit_symbol = "C"
         else:
