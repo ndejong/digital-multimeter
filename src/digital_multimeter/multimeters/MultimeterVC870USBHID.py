@@ -40,6 +40,7 @@ import re
 import math
 import usb.core
 import usb.util
+import platform
 
 from digital_multimeter.exceptions.MultimeterException import MultimeterException
 from digital_multimeter.multimeters.MultimeterBase import MultimeterBase
@@ -87,12 +88,12 @@ class MultimeterVC870USBHID(MultimeterBase):
 
         # This reset helps to readout the CH9325
         self.dev.reset()
-
-        if self.dev.is_kernel_driver_active(0) is True:
-            logging.debug("Detaching kernel driver before using")
-            self.dev.detach_kernel_driver(0)
-        else:
-            logging.debug("Kernel driver already detached")
+        if(platform.system() != 'Windows'):
+            if self.dev.is_kernel_driver_active(0) is True:
+                logging.debug("Detaching kernel driver before using")
+                self.dev.detach_kernel_driver(0)
+            else:
+                logging.debug("Kernel driver already detached")
 
         # Set default configuration and get it
         self.dev.set_configuration()
