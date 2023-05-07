@@ -1,6 +1,7 @@
-import sys
 import json
-from digital_multimeter.exceptions.MultimeterException import MultimeterException
+import sys
+
+from digital_multimeter.exceptions import MultimeterException
 
 
 def cli_output(data, format="json", output="stdout", count=0):

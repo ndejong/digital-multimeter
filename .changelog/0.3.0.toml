@@ -1,0 +1,8 @@
+
+release-date = "2020-12-13"
+
+[[entries]]
+id = "23e8a532-ec27-11ed-b758-0b3defa2a3d5"
+type = "fix"
+description = "Adjust license and update links to docs"
+author = "@ndejong"

@@ -2,7 +2,6 @@ import time
 
 
 class MultimeterBase:
-
     timestamp_start = None
     timestamp_previous = None
 

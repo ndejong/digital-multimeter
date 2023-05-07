@@ -1,14 +1,14 @@
 import logging
-from digital_multimeter.multimeters import multimeter_models
-from digital_multimeter.exceptions.MultimeterException import MultimeterException
 
+from digital_multimeter.exceptions import MultimeterException
+from digital_multimeter.multimeters import __multimeter_models__
 
 logger = logging.getLogger(__name__)
 
 
 class DigitalMultimeter:
     """
-    Implements an interface to various digital multimeters
+    Implements an interface for various digital multimeters via USB and serial
     """
 
     connect = None
@@ -17,15 +17,17 @@ class DigitalMultimeter:
 
     def __init__(self, connect=None, model="Default"):
         """
-        NB: Connection to the digital multimeter does not occur until required in a `get_reading()` call.
+        :param connect: str [required]
+            the connection to the digital multimeter, for example `/dev/ttyUSB0`
+        :param model: str [default `Default`]
+            the digital multimeter model to use for this connection; check models supported for a list
+            of supported.  Model names are case-sensitive.
 
-        _parameters_
-        * _connect_ (str) - the connection to the digital multimeter, for example `/dev/ttyUSB0`
-        * _model_ (str) default: `Default` - the digital multimeter model to use for this connection; check models
-        supported for a list of supported.  Model names are case sensitive.
+        NB: The serial/usb connection to the digital multimeter does not occur until it is first required
+        in a call to `get_reading()`
         """
         self.connect = connect
-        if model not in multimeter_models.keys():
+        if model not in __multimeter_models__.keys():
             raise MultimeterException("Multimeter model not supported", model)
         self.model = model
 
@@ -41,7 +43,7 @@ class DigitalMultimeter:
     def __load_multimeter(self):
         if self.multimeter:
             return
-        class_name = multimeter_models[self.model]
+        class_name = __multimeter_models__[self.model]
         logger.debug("Digital multimeter model: {}".format(self.model))
         logger.debug("Loading digital multimeter class: {}".format(class_name))
         module = __import__("digital_multimeter.multimeters.{}".format(class_name), fromlist=["digital_multimeter"])
@@ -51,4 +53,4 @@ class DigitalMultimeter:
         """
         Returns a list of the supported digital multimeter models.
         """
-        return {"models": list(multimeter_models.keys())}
+        return {"models": list(__multimeter_models__.keys())}

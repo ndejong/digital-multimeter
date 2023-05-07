@@ -1,0 +1,8 @@
+
+release-date = "2022-07-05"
+
+[[entries]]
+id = "56aa1f5a-ec27-11ed-93c9-7747e4c0d340"
+type = "feature"
+description = "Add support for Voltcraft_VC870, Editronic_EDI9604 and Digitec_DT9604"
+author = "@ndejong"

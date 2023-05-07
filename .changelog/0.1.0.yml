@@ -1,6 +1,0 @@
-release_date: '2020-11-30'
-changes:
-- type: feature
-  component: general
-  description: Initial revision
-  fixes: []

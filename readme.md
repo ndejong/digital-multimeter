@@ -4,8 +4,10 @@
 [![Read the Docs](https://img.shields.io/readthedocs/digital-multimeter)](https://digital-multimeter.readthedocs.io)
 ![License](https://img.shields.io/github/license/ndejong/digital-multimeter.svg)
 
-Digital Multimeter provides both a command-line interface and a Python module interface to receive data from a 
-variety of digital multimeters.  Checkout the [list of supported multimeters](https://digital-multimeter.readthedocs.io/en/latest/docs/supported-multimeters).
+Digital Multimeter provides both a CLI and Python API interface to receive data 
+from a variety of digital multimeters.  
+
+See the list of supported multimeters [here](https://digital-multimeter.readthedocs.io/en/latest/docs/supported-multimeters).
 
 ## Features
 * Command line and Python module interface to digital multimeters
@@ -15,15 +17,16 @@ variety of digital multimeters.  Checkout the [list of supported multimeters](ht
 * Configuration via config-file or environment-variables
 * Easy to expand for new digital-multimeter protocols
 * Easy installation using PyPI `pip`
-* Plenty of documentation and examples - https://digital-multimeter.readthedocs.io
+* Documentation and examples at [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
 
 ## Installation
 ```shell
 user@computer:~$ pip install [--upgrade] digital-multimeter
 ```
 
-## Command Line Usage
-Continuously read the digital-multimeter and pipe the JSON output through `jq` making it look prettier.
+## CLI Usage Example
+Continuously read the digital-multimeter and pipe the JSON output through `jq` to 
+make the JSON output look prettier.
 ```shell
 user@computer:~$ dmm read --connect /dev/ttyUSB0 --count 0 | jq .
 {
@@ -53,10 +56,8 @@ user@computer:~$ dmm read --connect /dev/ttyUSB0 --count 0 | jq .
 }
 ```
 
-Plenty more command-line examples [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/command-line/examples/).
-
-## Python Module Usage
-Python-module documentation is [available here](https://digital-multimeter.readthedocs.io/en/latest/docs/python-module/).
+## Python API Usage
+Python-module documentation is available [here](https://digital-multimeter.readthedocs.io/en/latest/docs/python-module/).
 
 ## Project
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
@@ -64,4 +65,4 @@ Python-module documentation is [available here](https://digital-multimeter.readt
 * ReadTheDocs - [digital-multimeter.readthedocs.io](https://digital-multimeter.readthedocs.io)
 
 ---
-Copyright &copy; 2021-2022 [Nicholas de Jong](https://www.nicholasdejong.com)
+Copyright &copy; 2021-2023 [Nicholas de Jong](https://www.nicholasdejong.com)

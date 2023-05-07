@@ -1,8 +1,4 @@
-import pytest
-from digital_multimeter import __author__
-from digital_multimeter import __version__
-from digital_multimeter import __title__
-from digital_multimeter import __license__
+from digital_multimeter import __author__, __license__, __title__, __version__
 
 
 def test_author_exist():

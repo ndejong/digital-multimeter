@@ -1,0 +1,7 @@
+release-date = "2020-11-30"
+
+[[entries]]
+id = "a6fa01b0-ec26-11ed-ab1c-67c382c69e31"
+type = "feature"
+description = "Initial revision"
+author = "@ndejong"

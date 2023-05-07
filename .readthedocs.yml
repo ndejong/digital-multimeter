@@ -1,10 +1,14 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html
+
+# version
 version: 2
 
 mkdocs: {}  # tell readthedocs to use mkdocs
 
 python:
-  version: 3.8
+  version: 3.7
   install:
   - method: pip
-    path: .
-  - requirements: docs/.readthedocs-requirements.txt
+    extra_requirements: ["rtd"]

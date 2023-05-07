@@ -34,15 +34,16 @@
     - https://github.com/pklaus/ut61e_python
 """
 
-import time
 import logging
-import re
 import math
+import re
+import time
+
 import usb.core
 import usb.util
 
-from digital_multimeter.exceptions.MultimeterException import MultimeterException
-from digital_multimeter.multimeters.MultimeterBase import MultimeterBase
+from ..exceptions import MultimeterException
+from ..multimeters.MultimeterBase import MultimeterBase
 
 UART_SPEED = 9600
 
@@ -59,7 +60,6 @@ class MultimeterVC870USBHIDException(MultimeterException):
 
 
 class MultimeterVC870USBHID(MultimeterBase):
-
     dev = None
     ep = None
     buffer = ""
@@ -287,7 +287,7 @@ class MultimeterVC870USBHID(MultimeterBase):
         }
 
         operation_mode = id_to_op_mode.get(operation_id)
-        if operation_mode == None:
+        if operation_mode is None:
             raise MultimeterVC870USBHIDException("Unsupported digital multimeter mode from packet")
 
         return operation_mode

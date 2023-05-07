@@ -1,6 +1,0 @@
-release_date: '2020-12-12'
-changes:
-- type: fix
-  component: general
-  description: Documentation updates
-  fixes: []

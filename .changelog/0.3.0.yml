@@ -1,6 +1,0 @@
-release_date: '2020-12-13'
-changes:
-- type: fix
-  component: general
-  description: Adjust license and update links to docs
-  fixes: []

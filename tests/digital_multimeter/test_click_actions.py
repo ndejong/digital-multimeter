@@ -1,7 +1,7 @@
-import pytest
 from click.testing import CliRunner
-from digital_multimeter.cli import click
+
 from digital_multimeter import __version__
+from digital_multimeter.cli import click
 
 
 def test_dmm_version():

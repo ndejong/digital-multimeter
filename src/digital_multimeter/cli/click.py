@@ -1,14 +1,14 @@
-import sys
-import click
 import logging
+import sys
 import warnings
 
-from digital_multimeter import __version__ as VERSION
-from digital_multimeter import __env_connect__ as ENV_CONNECT
-from digital_multimeter.exceptions.MultimeterException import MultimeterException
+import click
+
+from digital_multimeter import __env_connect__ as ENV_CONNECT, __version__ as VERSION
 from digital_multimeter.cli.config import Config
-from digital_multimeter.utils.cli_output import cli_output
-from digital_multimeter.DigitalMultimeter import DigitalMultimeter
+from digital_multimeter.exceptions import MultimeterException
+from digital_multimeter.main import DigitalMultimeter
+from digital_multimeter.utils import cli_output
 
 
 @click.group()
@@ -18,7 +18,7 @@ from digital_multimeter.DigitalMultimeter import DigitalMultimeter
 @click.version_option(VERSION)
 def dmm(quiet, verbose, disable_warnings):
     """
-    Digital multimeter CLI tool utilizing the Python3 DigitalMultimeter module.
+    Digital multimeter CLI tool utilizing the DigitalMultimeter() module.
 
     Configuration can be achieved through command arguments, environment values or config file.
 

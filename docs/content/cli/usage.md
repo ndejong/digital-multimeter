@@ -1,16 +1,13 @@
-# Digital Multimeter
+# Usage
 
-## Command Line Usage
-
-### Usage
-```shell script
+### Usage: dmm
+```shell
 Usage: dmm [OPTIONS] COMMAND [ARGS]...
 
-  Digital multimeter CLI tool utilizing the Python3 DigitalMultimeter
-  module.
+  Digital multimeter CLI tool utilizing the DigitalMultimeter() module.
 
-  Configuration can be achieved through command arguments, environment
-  values or config file.
+  Configuration can be achieved through command arguments, environment values
+  or config file.
 
   Documentation available https://digital-multimeter.readthedocs.io
 
@@ -27,7 +24,7 @@ Commands:
 ```
 
 ### Usage: dmm read
-```shell script
+```shell
 Usage: dmm read [OPTIONS]
 
   Read the digital multimeter and output data in various formats
@@ -43,7 +40,7 @@ Options:
 ```
 
 ### Usage: dmm models
-```shell script
+```shell
 Usage: dmm models [OPTIONS]
 
   Provides a list of the supported digital multimeter models

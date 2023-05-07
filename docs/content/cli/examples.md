@@ -1,10 +1,10 @@
-# Digital Multimeter
-
-## Command Line Examples
+# Examples
 
 ### Example 1: `dmm read`
-Obtain a single reading from the `Default` multimeter attached to `/dev/ttyUSB0` in JSON format
-```shell script
+Obtain a single reading from the `Default` multimeter attached to `/dev/ttyUSB0` in JSON 
+format.
+
+```shell
 user@computer:~$ dmm read --connect /dev/ttyUSB0 
 {
   "reading": {
@@ -35,8 +35,10 @@ user@computer:~$ dmm read --connect /dev/ttyUSB0
 
 
 ### Example 2 `dmm read` with CSV output and 5x readings
-Obtain 5x readings from a TekPower_TP4000ZC multimeter attached to `/dev/ttyUSB0` in CSV format
-```shell script
+Obtain 5x readings from a TekPower_TP4000ZC multimeter attached to `/dev/ttyUSB0` in CSV 
+format.
+
+```shell
 user@computer:~$ dmm read --connect /dev/ttyUSB0 --model TekPower_TP4000ZC -n 5 -f csv 
 reading_value,reading_unit_name,reading_unit_symbol,reading_scale,reading_scale_name,reading_scale_symbol,reading_scaled_value,reading_is_relative,instrument_module,instrument_operation_mode,instrument_low_battery,instrument_is_hold,time_elapsed,time_interval,time_timestamp,time_unit_name,time_unit_symbol
 173.0,volts,V,0.001,milli,m,0.17300000000000001,False,MultimeterDigitechQM1538,voltage_dc,False,False,0.181438965,0.181438965,1605958015.0846217,second,s
@@ -48,9 +50,10 @@ reading_value,reading_unit_name,reading_unit_symbol,reading_scale,reading_scale_
 
 
 ### Example 3: `dmm read` with CSV output using environment variables
-Obtain a single reading from a Tecpel_DMM8062 multimeter attached to `/dev/ttyUSB0` using environment variable 
-settings and show verbose debug logs.
-```shell script
+Obtain a single reading from a Tecpel_DMM8062 multimeter attached to `/dev/ttyUSB0` using 
+environment variable settings and show verbose debug logs.
+
+```shell
 user@computer:~$ export DMM_MODEL="Tecpel_DMM8062"
 user@computer:~$ export DMM_CONNECT="/dev/ttyUSB0"
 user@computer:~$ dmm -v read -f csv
@@ -70,19 +73,19 @@ reading_value,reading_unit_name,reading_unit_symbol,reading_scale,reading_scale_
 
 
 ### Example 4: `dmm read` using configuration file
-Obtain a single reading from a Tecpel_DMM8062 multimeter attached to `/dev/ttyUSB0` using settings provided in a 
-configuration file.
+Obtain a single reading from a Tecpel_DMM8062 multimeter attached to `/dev/ttyUSB0` using 
+settings provided in a configuration file.
 
-NB: by default any configuration file located at `~/.digital-multimeter` will be loaded unless overridden at the 
-command line as shown in this example.
+NB: by default any configuration file located at `~/.digital-multimeter` will be loaded 
+unless overridden at the command line as shown in this example.
 
-```shell script
-user@computer:~$ cat src/test/.digital-multimeter
+```shell
+user@computer:~$ cat tests/digital_multimeter/.digital-multimeter
 [digital-multimeter]
 model = Tecpel_DMM8062
 connect = /dev/ttyUSB0
 
-user@computer:~$ dmm read -C src/test/.digital-multimeter 
+user@computer:~$ dmm read --config tests/digital_multimeter/.digital-multimeter 
 {
   "reading": {
     "value": 126.4,
@@ -112,11 +115,11 @@ user@computer:~$ dmm read -C src/test/.digital-multimeter
 
 
 ### Example 5: `dmm read` to file
-Provide verbose debug logging output while obtaining a reading from a Voltcraft_VC820 multimeter attached 
-to `/dev/ttyUSB0` and write output to file `/tmp/data`
+Provide verbose debug logging output while obtaining a reading from a Voltcraft_VC820 
+multimeter attached to `/dev/ttyUSB0` and write output to file `/tmp/data`
 
-```shell script
-user@computer:~$ dmm -v read --connect /dev/ttyUSB0 --model Voltcraft_VC820 --output /tmp/data
+```shell
+user@computer:~$ dmm --verbose read --connect /dev/ttyUSB0 --model Voltcraft_VC820 --output /tmp/data
 [DEBUG|2020-11-22 12:23:25,811|digital_multimeter.cli.config]: "model" unset because no configuration file found.
 [DEBUG|2020-11-22 12:23:25,811|digital_multimeter.cli.config]: "connect" unset because no configuration file found.
 [DEBUG|2020-11-22 12:23:25,811|digital_multimeter.cli.click]: model=Voltcraft_VC820
@@ -127,18 +130,21 @@ user@computer:~$ dmm -v read --connect /dev/ttyUSB0 --model Voltcraft_VC820 --ou
 [DEBUG|2020-11-22 12:23:26,148|digital_multimeter.multimeters.MultimeterFortuneFS9721]: Received complete packet with 14x nibbles
 [DEBUG|2020-11-22 12:23:26,149|digital_multimeter.cli.click]: Readings cycle count: 1
 [DEBUG|2020-11-22 12:23:26,149|digital_multimeter.multimeters.MultimeterFortuneFS9721]: Closing serial connection
-````
+```
 
 
 ### Example 6: `dmm models`
 List the supported digital multimeter models
-```shell script
+
+```shell
 user@computer:~$ dmm models
 {
   "models": [
     "Default",
+    "Digitec_DT9604",
     "Digitech_QM1538",
     "Digitek_DT4000ZC",
+    "Editronic_EDI9604",
     "PCE_PCEDM32",
     "Tecpel_DMM8062",
     "TekPower_TP4000ZC",
@@ -146,7 +152,8 @@ user@computer:~$ dmm models
     "UniTrend_UT30E",
     "UniTrend_UT60E",
     "Voltcraft_VC820",
-    "Voltcraft_VC840"
+    "Voltcraft_VC840",
+    "Voltcraft_VC870"
   ]
 }
-````
+```

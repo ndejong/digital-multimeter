@@ -1,0 +1,13 @@
+
+template "mkdocs" {
+    content_directory = "content"
+}
+
+action "mkdocs-update-config" {
+    update '$.theme.features' add: ['navigation.sections']
+    update '$.theme.palette' add: {'scheme': 'default', 'primary': 'pink'}
+}
+
+action "preprocess-markdown" {
+    use "pydoc"
+}

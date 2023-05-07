@@ -1,0 +1,7 @@
+release-date = "2023-05-07"
+
+[[entries]]
+id = "aa76b1f2-2277-4a9e-b8f6-be4d6d0082c8"
+type = "improvement"
+description = "Rearrangement of project and code with combined fixes and improvements"
+author = "@ndejong"

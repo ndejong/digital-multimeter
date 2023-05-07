@@ -1,10 +1,11 @@
-import time
-import serial
 import logging
+import time
 
+import serial
 from serial import SerialException
-from digital_multimeter.exceptions.MultimeterException import MultimeterException
-from digital_multimeter.multimeters.MultimeterBase import MultimeterBase
+
+from ..exceptions import MultimeterException
+from ..multimeters.MultimeterBase import MultimeterBase
 
 SERIAL_BAUD = 2400
 SERIAL_PARITY = "N"
@@ -19,7 +20,6 @@ class MultimeterFortuneFS9721Exception(MultimeterException):
 
 
 class MultimeterFortuneFS9721(MultimeterBase):
-
     serial = None
 
     def __init__(self, connect):

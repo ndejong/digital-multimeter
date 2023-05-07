@@ -1,0 +1,21 @@
+
+site_name: "Digital Multimeter"
+
+nav:
+  - index.md
+  - supported-multimeters.md
+
+  - Command Line:
+    - cli/usage.md
+    - cli/environment.md
+    - cli/configuration.md
+    - cli/examples.md
+
+  - API:
+      - DigitalMultimeter: api/digitalmultimeter.md
+
+  - Other:
+    - project.md
+    - changelog.md
+    - development.md
+    - license.md

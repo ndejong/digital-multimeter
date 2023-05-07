@@ -1,0 +1,7 @@
+release-date = "2020-12-05"
+
+[[entries]]
+id = "cb67f660-ec26-11ed-abac-9f988eb82f9f"
+type = "feature"
+description = "Adds some tests, improved documentation etc"
+author = "@ndejong"

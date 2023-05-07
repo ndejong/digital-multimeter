@@ -1,15 +1,16 @@
-import os
-import logging
-import functools
 import configparser
+import functools
+import logging
+import os
 
-from digital_multimeter import __env_model__ as ENV_MODEL
-from digital_multimeter import __env_connect__ as ENV_CONNECT
-from digital_multimeter import __config_file_user__ as CONFIG_FILE_USER
-from digital_multimeter import __config_file_system__ as CONFIG_FILE_SYSTEM
-from digital_multimeter import __config_section_name__ as CONFIG_SECTION_NAME
-from digital_multimeter.exceptions.MultimeterException import MultimeterException
-
+from digital_multimeter import (
+    __config_file_system__ as CONFIG_FILE_SYSTEM,
+    __config_file_user__ as CONFIG_FILE_USER,
+    __config_section_name__ as CONFIG_SECTION_NAME,
+    __env_connect__ as ENV_CONNECT,
+    __env_model__ as ENV_MODEL,
+)
+from digital_multimeter.exceptions import MultimeterException
 
 logger = logging.getLogger(__name__)
 
@@ -19,7 +20,6 @@ class ConfigException(MultimeterException):
 
 
 class Config:
-
     session_config_file = None
 
     def __init__(self, session_config_file=None):
@@ -30,7 +30,6 @@ class Config:
 
     @functools.lru_cache()
     def get(self, item):
-
         if not self.session_config_file:
             if item == "connect":  # serial port
                 env_name = ENV_CONNECT
@@ -49,7 +48,6 @@ class Config:
 
     @functools.lru_cache()
     def __get_config_from_file(self, item):
-
         config = None
 
         if self.session_config_file and not os.path.isfile(os.path.expanduser(self.session_config_file)):
@@ -76,10 +74,8 @@ class Config:
 
     @functools.lru_cache()
     def __load_config_file(self, filename, section=CONFIG_SECTION_NAME):
-
         filename = os.path.expanduser(filename)
         if os.path.isfile(filename):
-
             cp = configparser.ConfigParser()
 
             try:
