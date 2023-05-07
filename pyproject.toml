@@ -11,7 +11,16 @@ authors = ["Nicholas de Jong <contact@nicholasdejong.com>"]
 license = "BSD-2-Clause"
 readme = "readme.md"
 packages = [{ include = "digital_multimeter", from = "src" }]
-classifiers = ["Environment :: Console", "Intended Audience :: Developers", "Intended Audience :: Information Technology", "Programming Language :: Python :: 3", "License :: OSI Approved :: BSD License"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: BSD License"
+]
 keywords = ["multimeter", "digital multimeter", "dmm", "Digitech", "Digitek", "TekPower", "UniTrend", "Voltcraft"]
 
 [tool.poetry.urls]
@@ -25,23 +34,21 @@ dmm = "digital_multimeter.cli.entrypoints:dmm"
 
 [tool.poetry.dependencies]
 python = "^3.5"
-click = ">=7.0.0,<9.0.0"    # https://pypi.org/project/click/#history
-pyserial = ">=3.0.0,<4.0.0" # https://pypi.org/project/pyserial/#history
-pyusb = ">=1.0.0,<2.0.0"    # https://pypi.org/project/pyusb/#history
+click = ">=7.0.0,<9.0.0"        # https://pypi.org/project/click/#history
+pyserial = ">=3.0.0,<4.0.0"     # https://pypi.org/project/pyserial/#history
+pyusb = ">=1.0.0,<2.0.0"        # https://pypi.org/project/pyusb/#history
 
 [tool.poetry.dev-dependencies]
-black = "^23.3"             # https://pypi.org/project/black/#history
-flake8 = "^6.0"             # https://pypi.org/project/flake8/#history
-isort = "^5.12"             # https://pypi.org/project/isort/#history
-pytest = "^7.3"             # https://pypi.org/project/pytest/#history
-safety = "2.4.0b1"          # https://pypi.org/project/safety/#history
-mkdocs = "^1.4"             # https://pypi.org/project/mkdocs/#history
-mkdocs-material = "^9.1"    # https://pypi.org/project/mkdocs-material/#history
-novella = "^0.2"            # https://pypi.org/project/novella/#history
-pydoc-markdown = "^4.6"     # https://pypi.org/project/pydoc-markdown/#history
-
-[tool.poetry.plugins."slap.plugins.repository_ci"]
-github-actions = "slap.ext.repository_ci.github_actions:GithubActionsRepositoryCIPlugin"
+black = "^23.3"                 # https://pypi.org/project/black/#history
+flake8 = "^6.0"                 # https://pypi.org/project/flake8/#history
+isort = "^5.12"                 # https://pypi.org/project/isort/#history
+pytest = "^7.3"                 # https://pypi.org/project/pytest/#history
+safety = "2.4.0b1"              # https://pypi.org/project/safety/#history
+mkdocs = "^1.4"                 # https://pypi.org/project/mkdocs/#history
+# NB: docs/requirements.txt needs to be kept up-to-date manually
+novella = "^0.2"                # https://pypi.org/project/novella/#history
+pydoc-markdown = "^4.6"         # https://pypi.org/project/pydoc-markdown/#history
+mkdocs-material = "^9.1"        # https://pypi.org/project/mkdocs-material/#history
 
 [tool.poetry.plugins."slap.plugins.check"]
 changelog = "slap.ext.checks.changelog:ChangelogValidationCheckPlugin"
@@ -76,5 +83,9 @@ line-length = 120
 
 [tool.readthedocs-custom-steps]
 script = """
-novella --site-dir _site/html
+cd docs
+novella --base-url /en/latest/
+mkdir -p ../_readthedocs
+mv _site ../_readthedocs/html
+echo "COMMAND-PREVENTED: $@"
 """

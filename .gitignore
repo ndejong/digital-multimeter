@@ -231,3 +231,4 @@ cython_debug/
 
 # Custom
 dev/
+docs/_site

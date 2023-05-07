@@ -4,6 +4,7 @@ template "mkdocs" {
 }
 
 action "mkdocs-update-config" {
+    site_name = "Digital Multimeter"
     update '$.theme.features' add: ['navigation.sections']
     update '$.theme.palette' add: {'scheme': 'default', 'primary': 'pink'}
 }
