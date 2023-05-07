@@ -5,7 +5,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "digital-multimeter"
-version = "0.5.1"
+version = "0.5.2"
 description = "Digital Multimeter provides both a CLI interface and a Python API interface to receive data from a variety of digital multimeters."
 authors = ["Nicholas de Jong <contact@nicholasdejong.com>"]
 license = "BSD-2-Clause"
