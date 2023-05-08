@@ -7,7 +7,7 @@
 Digital Multimeter provides both a CLI and Python API interface to receive data 
 from a variety of digital multimeters.  
 
-See the list of supported multimeters [here](https://digital-multimeter.readthedocs.io/en/latest/docs/supported-multimeters).
+See the list of supported multimeters [here](https://digital-multimeter.readthedocs.io/en/latest/supported-multimeters/).
 
 ## Features
 * Command line and Python module interface to digital multimeters
@@ -57,7 +57,7 @@ user@computer:~$ dmm read --connect /dev/ttyUSB0 --count 0 | jq .
 ```
 
 ## Python API Usage
-Python-module documentation is available [here](https://digital-multimeter.readthedocs.io/en/latest/docs/python-module/).
+Python-module documentation is available [here](https://digital-multimeter.readthedocs.io/en/latest/api/digitalmultimeter/).
 
 ## Project
 * Github - [github.com/ndejong/digital-multimeter](https://github.com/ndejong/digital-multimeter)
