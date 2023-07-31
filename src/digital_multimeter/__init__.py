@@ -2,7 +2,7 @@
 # Copyright (c) 2020 Nicholas de Jong
 
 __author__ = "Nicholas de Jong <contact@nicholasdejong.com>"
-__version__ = "0.5.2"
+__version__ = "0.5.3"
 __title__ = "digital-multimeter"
 __license__ = "BSD-2-Clause"
 
