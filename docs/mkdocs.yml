@@ -3,7 +3,7 @@ docs_dir: content
 site_name: "Digital Multimeter"
 
 nav:
-  - index.md
+  - Home: index.md
   - supported-multimeters.md
 
   - Command Line:

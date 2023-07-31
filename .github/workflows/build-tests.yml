@@ -9,16 +9,28 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.10", "3.11"]
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
     steps:
     - uses: actions/checkout@v3
     - uses: NiklasRosenstein/slap@gha/install/v1
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v4
       with: { python-version: "${{ matrix.python-version }}" }
-    - run: slap venv --create tester && slap install --use-venv=tester
-    - name: Validate and test
+
+    - name: Create a venv to operate within using slap-cli
+      run: |
+        slap venv --create tester
+
+    - name: Install, test and build a package to install
       run: |
         slap release --validate
-        slap test --use-venv=tester
         slap install --use-venv=tester
+        slap test --use-venv=tester
+        mkdir build-tester
+        slap publish --build-directory build-tester --dry
+
+    - name: Install the package from whl and run the application
+      run: |
+        pip install build-tester/*.whl
+        dmm --help

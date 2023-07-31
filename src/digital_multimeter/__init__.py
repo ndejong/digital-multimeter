@@ -4,7 +4,7 @@
 __author__ = "Nicholas de Jong <contact@nicholasdejong.com>"
 __version__ = "0.5.2"
 __title__ = "digital-multimeter"
-__license__ = "MIT"
+__license__ = "BSD-2-Clause"
 
 __env_model__ = "DMM_MODEL"
 __env_connect__ = "DMM_CONNECT"
